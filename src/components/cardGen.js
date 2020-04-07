@@ -11,8 +11,25 @@ const images = importAll(require.context('../assets/cards', false, /\.(png|jpe?g
 export default function arrGen(gr, n, x, v, p){
 
     let pc = 1
+    let ns = 0
+    
+    
     const totalArrBase = []
     while (n > x) {
+      let name = `${gr}${pc}`
+      // console.log(name)
+      // if (p.length > ns && name === p[ns]) {
+      //   console.log('p test')
+      //   console.log(name)
+      //   console.log(p[ns])
+      //   console.log(p.length)
+      //   ns++
+      // }
+      // console.log(name, `${gr}${p[ns]}`)
+      if (name === `${gr}${p[ns]}`) {
+        console.log(name, p[ns])
+        pc++
+      }
       totalArrBase.push({
         name: `${gr}${n}`,
         value: 0,
@@ -21,7 +38,7 @@ export default function arrGen(gr, n, x, v, p){
         pos: 0,
         neg: 0,
         chance: 0,
-        port: images[`${gr}${n}.jpg`]
+        port: images[`${gr}${pc}.jpg`]
       });
   
       pc++
@@ -35,7 +52,8 @@ export default function arrGen(gr, n, x, v, p){
         grade: gr,
         pos: 0,
         neg: 0,
-        chance: 0
+        chance: 0,
+        port: images[`${gr}${p[n-1]}.jpg`]
       });
   
   

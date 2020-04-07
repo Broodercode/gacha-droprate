@@ -11,7 +11,7 @@ const d2 = deckB()
 sample(2000, 100, d2)
 const sampleList = sd.map(i => {
     return (
-        <li>
+        <li key={i.name}>
     <img src={i.port} />  {`Name: ${i.name} Value: ${i.value}`}
     </li>
     )
@@ -25,6 +25,9 @@ class DeckController extends Component {
     render() {
         return (
             <div>
+                <div>
+                    <input></input>
+                </div>
                 <img src={''} alt='Character Portrait'></img>
                 {console.log(d2)}
                 <ul>
