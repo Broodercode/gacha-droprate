@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import {finalResult, sampleDraw, sample} from "./components/deckStats"
+import { deckA, deckB } from "./components/deckGen";
+import DeckController from "./components/DeckController"
 
+
+
+
+// const d1 = deckA()
+// const d2 = deckB()
+// sample(2000, 100, d2)
+// const ds = finalResult
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DeckController />
+      {/* {console.log(ds)}
+      {console.log(d2)}
+      {console.log(sampleDraw)} */}
+    
     </div>
   );
 }
