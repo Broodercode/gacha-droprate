@@ -1,0 +1,52 @@
+.unit {
+  &__won {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 12rem;
+    margin: 0.3rem;
+  }
+
+  &__heading {
+    margin-top: 4rem;
+  }
+
+  &__port {
+    position: relative;
+    height: 8rem;
+    width: 8rem;
+
+    &--valgood {
+      position: relative;
+      float: right;
+      height: 8rem;
+      width: 4rem;
+      font-size: $large-font-size;
+      line-height: 8rem;
+      font-weight: 1000;
+      border: solid black 1px;
+      background-color: $color-green;
+    }
+    &--valbad {
+      position: relative;
+      float: right;
+      height: 8rem;
+      width: 4rem;
+      font-size: $large-font-size;
+      line-height: 8rem;
+      font-weight: 1000;
+      border: solid black 1px;
+      background-color: $color-cancel;
+    }
+    &--chancebox {
+      display: inline-block;
+      height: 4rem;
+      width: 100%;
+      border: solid black 1px;
+
+      line-height: 4rem;
+      font-size: $large-font-size;
+      font-weight: 1000;
+    }
+  }
+}

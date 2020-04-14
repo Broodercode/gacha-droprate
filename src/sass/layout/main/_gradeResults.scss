@@ -1,0 +1,22 @@
+.grade {
+  position: relative;
+  margin-top: 4rem;
+  width: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  &__item {
+    list-style: none;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    border: solid black 0.1rem;
+    line-height: 3rem;
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &__percent {
+    font-size: $large-font-size;
+  }
+}

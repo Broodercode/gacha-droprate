@@ -1,0 +1,64 @@
+.gem {
+  &__error {
+    color: red;
+    font-size: 1.5rem;
+  }
+  &__input {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    display: inline-block;
+    margin-bottom: 3rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__button {
+    position: relative;
+    display: inline-block;
+    border-radius: 0.5rem;
+    width: 15rem;
+    height: 6rem;
+    background-color: $color-purple;
+    font-family: "Crimson Text", serif;
+    font-size: 2rem;
+    text-shadow: 0px 2px #000000;
+    font-weight: 400;
+    border: 0.4rem ridge $color-grey-dark;
+    box-shadow: inset 0rem 0rem 0.3rem 0.3rem $color-purple-light;
+    color: $color-white;
+
+    &__readout {
+      position: relative;
+
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2rem;
+      border-radius: 1rem;
+      background-color: $color-purple-dark;
+      font-size: 1.5rem;
+      text-align: right;
+      padding-right: 1rem;
+
+      &__icon {
+        width: 2rem;
+        height: 2rem;
+        float: left;
+      }
+    }
+  }
+}

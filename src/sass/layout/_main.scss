@@ -1,0 +1,18 @@
+.section-leftside {
+  @include respond(phone) {
+    
+   
+  }
+}
+
+.section-center {
+    @include respond(phone) {
+     
+      }
+}
+
+.section-rightside {
+    @include respond(phone) {
+        
+      }
+}

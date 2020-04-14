@@ -1,0 +1,74 @@
+body {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+}
+
+.heading-primary {
+  backface-visibility: hidden;
+  color: $color-green;
+  font-size: $hero-font-size;
+
+  &--main {
+    display: inline-block;
+
+    font-weight: 700;
+
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+
+    /* animation-iteration-count: 3; */
+
+    /* animation-delay: 3s; */
+  }
+
+  &--sub {
+    display: inline-block;
+
+    font-weight: 400;
+
+    animation: moveInRight 5s ease-out;
+  }
+  &--flavour-1 {
+    color: $color-secondary;
+    display: inline-block;
+
+    animation: moveInRight 5s ease-out;
+  }
+  &--flavour-2 {
+    color: $color-tertiary;
+    display: inline-block;
+
+    animation: moveInRight 5s ease-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-secondary,
+    $color-secondary-dark
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  margin-bottom: 6rem;
+
+  &:hover {
+    transform: scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $large-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}

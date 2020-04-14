@@ -1,0 +1,18 @@
+.header {
+  position: relative;
+  background-image: url("../../assets/misc/hero2.jpg");
+  background-size: cover;
+  width: 100%;
+  display: block;
+  height: 30rem;
+
+  &__title {
+    position: relative;
+    transform: translate(-50%, -50%);
+    font-size: $huge-font-size;
+    text-shadow: black;
+    color: $color-white;
+    top: 50%;
+    left: 50%;
+  }
+}

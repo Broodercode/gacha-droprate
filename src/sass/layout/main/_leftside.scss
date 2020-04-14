@@ -1,0 +1,23 @@
+.leftside {
+  position: relative;
+  margin-top: 5rem;
+  
+
+  width: 30rem;
+
+  @include respond(phone) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+
+  &__ad {
+    margin-top: 3rem;
+    position: relative;
+    height: 25rem;
+    width: 30rem;
+    background-color: black;
+  }
+ 
+}
