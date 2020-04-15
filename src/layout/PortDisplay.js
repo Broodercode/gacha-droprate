@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import {deckA} from "../components/deckGen"
 
 class PortDisplay extends Component {
   render() {
     let portMap;
     let value = 0;
+    const d1 = deckA()
     if (this.props.sample !== null) {
+  
       portMap = this.props.sample.map((i) => {
         value++;
 
@@ -38,12 +41,26 @@ class PortDisplay extends Component {
           return null;
         }
       });
+    } else {
+      portMap = d1.map((i) => {
+        return (
+          <li className="unit__won" key={i.name}>
+            <img
+              className="unit__port"
+              src={i.port}
+              alt="Character portrait"
+            />{" "}
+            <p className="unit__port--valbad">{`${i.value}`}</p>
+            <p className="unit__port--chancebox">{`0%`}</p>
+          </li>
+        ); 
+      })
     }
 
     return (
       <div>
         <div className="unit__heading">
-          <h2>Units won</h2>
+          <h2>&#8595; Units won &#8595;</h2>
         </div>
 
         <div>{portMap}</div>

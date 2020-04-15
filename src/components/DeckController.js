@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { finalResult, sampleDraw, sample } from "./deckStats";
-import { deckA, deckB } from "./deckGen";
+import { deckA, deckB, deckC } from "./deckGen";
 import PortDisplay from "../layout/PortDisplay";
 import BannerList from "../layout/BannerList";
 import SelectedBanner from "../layout/SelectedBanner";
@@ -8,11 +8,13 @@ import DeckResults from "../layout/DeckResults";
 import GemInput from "../layout/GemInput";
 import ban2 from "../assets/banner/ban7.png";
 import ban1 from "../assets/banner/ban6.PNG";
+import ban3 from "../assets/banner/ban8.PNG";
 
 let sd = sampleDraw;
 
 const d1 = deckA();
 const d2 = deckB();
+const d3 = deckC();
 
 class DeckController extends Component {
   constructor(props) {
@@ -88,6 +90,13 @@ class DeckController extends Component {
         sample: null,
         result: [],
       });
+    } else if (d === "ban3") {
+      this.setState({
+        deck: d3,
+        banner: ban3,
+        sample: null,
+        result: [],
+      });
     }
   }
   onGemChange(e) {
@@ -118,7 +127,6 @@ class DeckController extends Component {
         <div className="center">
             <div className="center__deck">
               <SelectedBanner banner={this.state.banner} />
-              {/* <img className="main__select" onClick={this.props.onBannerSubmit} alt="Selected Banner"  src={this.state.banner}></img> */}
             </div>
 
             <div className="center__input">

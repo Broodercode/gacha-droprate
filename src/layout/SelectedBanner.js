@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class SelectedBanner extends Component {
   bannerToggle = () => {
     if (this.props.banner === null) {
-      return <h1 className="main__deck--noselect">Please select a banner</h1>;
+      return <h1 className="main__deck--noselect">&#8592; Please select a banner</h1>;
     } else {
       return (
         <img
