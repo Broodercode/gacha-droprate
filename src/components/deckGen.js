@@ -89,7 +89,7 @@ export function deckB() {
   return totalArr;
 }
 export function deckC() {
-  const a = cardGen("ur", 12, 3, [43, 21, 801, 801], [5, 11, 1], [43, 21, 801, 801]);
+  const a = cardGen("ur", 13, 3, [801, 21, 801, 43], [1, 5, 11], [801, 21, 801, 43], []);
   const b = cardGen("mr", 16, 0, [433], [], [3000]);
   const c = cardGen("sr", 11, 0, [2857], [], [0]);
   const d = cardGen("r", 3, 0, [2857], [], [0]);
